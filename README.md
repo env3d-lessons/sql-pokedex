@@ -22,7 +22,7 @@ A Database containing data from the various pokemon games.
   7. Some pokemons can evolve into mulitple species, find out the name of these
      pokemons and how many species they are evolve into.  Output the
      lower case pokemon name in the first column, and the number of species
-     in the second column.
+     in the second column.  Sort by pokemon's identifier.
 
 
 # Notes
@@ -30,3 +30,18 @@ A Database containing data from the various pokemon games.
 Data generated via https://github.com/veekun/pokedex.  I needed to
 download and install the code, then run the `pokedex load` command
 and extract the pokedex.sqlite file.
+# Hand-in
+
+Test your solution by executing the following command on the bash terminal:
+
+```shell
+$ pytest
+```
+
+When you are satisified, execute the following commands to submit:
+
+```shell
+$ git add -A
+$ git commit -m 'submit'
+$ git push
+```
