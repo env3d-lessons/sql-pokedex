@@ -1,6 +1,26 @@
-# Introduction
+# Understanding the Pokedex Database Schema  
 
-A Database containing data from the various pokemon games.
+The database pokedex.db contains a wealth of information on mulitple generations of pokemons
+and the various relationships.
+
+Simply put, a database is made up of **entities**, which are independent concepts. In this case, we have:  
+
+- **`pokemon`** – Represents individual Pokémon, storing details like height, weight, and experience.  
+- **`abilities`** – Represents abilities that Pokémon can have, such as "Overgrow" or "Blaze."  
+
+Entities are typically named with a **single word** since they represent distinct concepts.  
+
+To link these entities together, we use **relationship tables**. These describe how entities interact with each other:  
+
+- **`pokemon_abilities`** – Connects Pokémon to their abilities. Since a Pokémon can have multiple abilities, and
+an ability can belong to multiple Pokémon, this table establishes the many-to-many relationship.  
+
+Each relationship table usually includes:  
+- A **foreign key** for each related entity (e.g., `pokemon_id` and `ability_id`).  
+- Additional details about the relationship (e.g., whether an ability is hidden and which slot it occupies).  
+
+By structuring data this way, we keep the database flexible and easy to expand. Instead of diving into
+formal database theory, you can learn these patterns by observing how data is organized.  
 
 # Questions
 
@@ -30,18 +50,3 @@ A Database containing data from the various pokemon games.
 Data generated via https://github.com/veekun/pokedex.  I needed to
 download and install the code, then run the `pokedex load` command
 and extract the pokedex.sqlite file.
-# Hand-in
-
-Test your solution by executing the following command on the bash terminal:
-
-```shell
-$ pytest
-```
-
-When you are satisified, execute the following commands to submit:
-
-```shell
-$ git add -A
-$ git commit -m 'submit'
-$ git push
-```
